@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(156, 149, 176);
+  border-top: 1px solid rgb(115, 110, 129);
+  color: white;
+  padding: 16px 20px;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 20px 20px;
+    margin-top: 18px;
+    font-size: 16px;
+  }
+}

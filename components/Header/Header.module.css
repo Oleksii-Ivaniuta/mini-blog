@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(156, 149, 176);
+  border-bottom: 1px solid rgb(115, 110, 129);
+  color: white;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.navlist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 20px 20px;
+    margin-bottom: 18px;
+    font-size: 20px;
+  }
+}
