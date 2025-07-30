@@ -9,4 +9,5 @@ export type Dictionary = {
   "open": string;
   "loading": string;
   "error": string;
+  "try again": string;
 };

@@ -12,5 +12,6 @@
   "meta layout description": "Read posts, explore routes, and learn Next.js features through a clean and accessible multilingual blog.",
   "open": "Open",
   "loading": "Loading...",
-  "error": "Something went wrong. Please try again later."
+  "error": "Something went wrong. Please try again later.",
+  "try again": "Try again"
 }
