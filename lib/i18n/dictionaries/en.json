@@ -5,5 +5,9 @@
   "not found message": "Sorry, the page you are looking for does not exist.",
   "back to home": "Back to home",
   "nav home": "Home",
-  "nav about": "About"
+  "nav about": "About",
+  "meta about title": "About - MiniBlog",
+  "meta about description": "Learn more about the MiniBlog project, the technologies behind it, and the team that built it.",
+  "meta layout title": "MiniBlog - Multilingual demo blog",
+  "meta layout description": "Read posts, explore routes, and learn Next.js features through a clean and accessible multilingual blog."
 }

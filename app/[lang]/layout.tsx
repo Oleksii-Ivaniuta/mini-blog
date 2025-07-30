@@ -6,30 +6,17 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: 'MiniBlog',
-  description:
-    'A simple multilingual blog built with Next.js. Explore posts, learn about the project, and switch languages with ease.',
-  icons: {
-    icon: '/favicon.svg',
-  },
-  openGraph: {
-    title: 'MiniBlog',
-    description:
-      'A simple multilingual blog built with Next.js. Explore posts, learn about the project, and switch languages with ease.',
-    url: 'https://your-vercel-url.vercel.app/',
-    siteName: 'MiniBlog',
-    images: [
-      {
-        url: 'https://your-vercel-url.vercel.app/og-image.jpg', // Замінити на актуальне зображення
-        width: 1200,
-        height: 630,
-        alt: 'MiniBlog OpenGraph Image',
-      },
-    ],
-    type: 'website',
-  },
-};
+export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
+  const dict = await getDictionary(params.locale);
+
+  return {
+    title: dict['meta layout title'],
+    description: dict['meta layout description'],
+    icons: {
+      icon: '/favicon.svg',
+    }
+  };
+}
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -52,11 +39,12 @@ const dictionary = await getDictionary(params.lang);
 
   return (
     <html lang={params.lang}>
-      <body className='container'>
+      <body className={`${roboto.variable} container`}>
         <Header dictionary={dictionary}/>
         <main>{children}</main>
+        <Footer dictionary={dictionary}/>
       </body>
-      <Footer dictionary={dictionary}/>
+      
     </html>
   );
 }
