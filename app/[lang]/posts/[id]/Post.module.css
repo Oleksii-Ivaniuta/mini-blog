@@ -1,0 +1,50 @@
+.button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: rgb(156, 149, 176);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 160px;
+  text-align: center;
+  align-self: center;
+}
+
+.button:hover {
+  background-color: rgb(115, 110, 129);
+}
+
+.header {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.text {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.container {
+  max-width: 300px;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .text {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .container {
+    max-width: 480px;
+  }
+}
