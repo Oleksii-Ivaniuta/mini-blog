@@ -5,6 +5,7 @@ import { i18n, type Locale } from '@/lib/i18n/i18n-config';
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import "./globals.css";
+import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
 
 export async function generateMetadata({ params }: { params: { locale: Locale } }): Promise<Metadata> {
   const dict = await getDictionary(params.locale);
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
     }
   };
 }
+
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -40,9 +42,11 @@ const dictionary = await getDictionary(params.lang);
   return (
     <html lang={params.lang}>
       <body className={`${roboto.variable} container`}>
+        <TanStackProvider>
         <Header dictionary={dictionary}/>
         <main>{children}</main>
         <Footer dictionary={dictionary}/>
+        </TanStackProvider>
       </body>
       
     </html>

@@ -9,5 +9,8 @@
   "meta about title": "About - MiniBlog",
   "meta about description": "Learn more about the MiniBlog project, the technologies behind it, and the team that built it.",
   "meta layout title": "MiniBlog - Multilingual demo blog",
-  "meta layout description": "Read posts, explore routes, and learn Next.js features through a clean and accessible multilingual blog."
+  "meta layout description": "Read posts, explore routes, and learn Next.js features through a clean and accessible multilingual blog.",
+  "open": "Open",
+  "loading": "Loading...",
+  "error": "Something went wrong. Please try again later."
 }

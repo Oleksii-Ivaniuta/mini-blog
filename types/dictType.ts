@@ -6,4 +6,7 @@ export type Dictionary = {
   "back to home": string;
   "nav home": string;
   "nav about": string;
+  "open": string;
+  "loading": string;
+  "error": string;
 };
